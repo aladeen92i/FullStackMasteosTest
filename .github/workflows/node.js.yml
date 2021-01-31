@@ -29,12 +29,14 @@ jobs:
       run: |
         cd client
         npm ci
+        npm run lint
         npm run build --if-present
         npm test
     - name: npm install, lint, build, and test back end
       run: |
         cd server
         npm ci
+        npm run lint
         npm run build --if-present
         npm test
         
