@@ -8,7 +8,7 @@ import WhatExtension from '../Components/JUP/WhatExtension'
 const Game = () => {
 	return (
 		<div className="container">
-			<ul className="polls">
+			<ul className="games">
 				<li><DoubleIt /></li>
 				<li><IsEven /></li>
 				<li><WhatExtension /></li>
