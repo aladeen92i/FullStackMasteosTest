@@ -12,5 +12,10 @@
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "node-fetch": "^2.6.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.19.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-react": "^7.22.0"
   }
 }
