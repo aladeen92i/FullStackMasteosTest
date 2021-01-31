@@ -84,30 +84,30 @@ app.post('/arraySum', (req,res) => {
     res.status(200).json(sumNestedArrays(array))
 })
 
-app.get('/coinTicker', async (req, res) => {
+// app.get('/coinTicker', async (req, res) => {
                                          
-    const requestOptions = {
-        method: 'GET',
-        headers: {
-            "Content-Type": "application/json",
-            "Accept-Encoding": "deflate, gzip",
-            "X-CMC_PRO_API_KEY": "2de81a53-a7ad-4538-b69b-2aae41b63efc"
-                },
-        mode: 'cors',
-        qs: {
-            'start': '1',
-            'limit': '50',
-            'convert': 'USD'
-        },
-        json: true,
-        gzip: true
-        }
-        const result = await fetch('https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest', requestOptions)
-        const json = await result.json()
-        let {data} = json 
-        console.log(data)
-        res.status(200).json(data)
-})
+//     const requestOptions = {
+//         method: 'GET',
+//         headers: {
+//             "Content-Type": "application/json",
+//             "Accept-Encoding": "deflate, gzip",
+//             "X-CMC_PRO_API_KEY": "2de81a53-a7ad-4538-b69b-2aae41b63efc"
+//                 },
+//         mode: 'cors',
+//         qs: {
+//             'start': '1',
+//             'limit': '50',
+//             'convert': 'USD'
+//         },
+//         json: true,
+//         gzip: true
+//         }
+//         const result = await fetch('https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest', requestOptions)
+//         const json = await result.json()
+//         let {data} = json 
+//         console.log(data)
+//         res.status(200).json(data)
+// })
 
 app.listen(8080, () => {
     console.log("Server listening on 8080")
