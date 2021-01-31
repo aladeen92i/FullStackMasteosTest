@@ -1,0 +1,25 @@
+.polls li {
+    background-color: rgba(0, 0, 0, 0.616);
+    color: rgb(197, 197, 197);
+    padding: 0.5rem;
+    text-align: center;
+    border-style:inset;
+  }
+  
+  .polls li:nth-child(odd) {
+    border-style: outset;
+  }
+  
+  .poll-title {
+    color: black;
+    font-size: 2rem;
+    margin-top: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .pie {
+    width: 40%;
+    align-content: center;
+
+  }

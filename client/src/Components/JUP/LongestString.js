@@ -32,40 +32,41 @@ function LongestString () {
   // conditional rendering
 
   return (
-    <div>
-    <div className="whatExtension">
+    <div className="container">
+    <div className="longestString">
       <h2>which is the longest string ?</h2>
       <br></br>
-      <form onSubmit={handleSubmit}>
-        <label>your strings</label>
+      <form onSubmit={handleSubmit} className="form">
+        <label className="form-label">your strings</label>
         <br></br>
-        <input 
+        <input
+          className="form-input"
           type="text" 
           required 
           value={String1}
           onChange={(e) => setString1(e.target.value)}
         />
-        <br></br>
-                <input 
+        
+        <input 
+          className="form-input"
           type="text" 
           required 
           value={String2}
           onChange={(e) => setString2(e.target.value)}
         />
-        <br></br>
-                <input 
+      
+        <input 
+          className="form-input"
           type="text" 
           required 
           value={String3}
           onChange={(e) => setString3(e.target.value)}
         />
-        <br></br>
-        <button>Here we Go !</button>
+       
+        <button className="button button_center">Here we Go !</button>
       </form>
     </div>
-      <ul>
-        <li>{result && <div>{result}</div>}</li>
-      </ul>
+        {result && <div>{result}</div>}
     </div>
 
   );

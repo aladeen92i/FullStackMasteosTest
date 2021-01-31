@@ -1,16 +1,15 @@
 import { useState } from "react";
-import { useHistory } from "react-router-dom";
 
 function IsEven () {
 
-  const [i, setI] = useState(0)
+  const [isEven, setIsEven] = useState(0)
   const [error, setError] = useState(null)
   const [isLoaded, setIsLoaded] = useState(false)
   const [result, setResult] = useState(0)
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    const payload = {i}
+    const payload = {isEven}
 
     fetch('http://localhost:8080/isNumberEven', {
       method: 'POST',
@@ -30,23 +29,22 @@ function IsEven () {
   // conditional rendering
 
   return (
-    <div>
-    <div className="isEven">
-      <h2>Is your Number Even ?</h2>
-      <form onSubmit={handleSubmit}>
-        <label>your number</label>
-        <input 
-          type="number" 
-          required 
-          value={i}
-          onChange={(e) => setI(e.target.value)}
-        />
-        <button>Here we Go !</button>
-      </form>
-    </div>
-      <ul>
-        <li>{result && <div>{result}</div>}</li>
-      </ul>
+    <div className="container">
+      <div className="isEven">
+        <h2>Is your Number Even ?</h2>
+        <form onSubmit={handleSubmit} className="form">
+          <label className="form-label">your number</label>
+          <input
+            className="form-input"
+            type="number" 
+            required 
+            value={isEven}
+            onChange={(e) => setIsEven(e.target.value)}
+          />
+          <button className="button button_center">Here we Go !</button>
+        </form>
+      </div>
+        {result && <div>{result}</div>}
     </div>
 
   );

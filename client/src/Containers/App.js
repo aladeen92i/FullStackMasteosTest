@@ -1,14 +1,17 @@
-import Navbar from './Navbar';
-import Home from './Home';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Create from './Create';
-import BlogDetails from './BlogDetails';
-import NotFound from './NotFound';
+import Navbar from './Navbar'
+import Home from './Home'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import Create from '../Components/Create'
+import Game from './Game'
+import BlogDetails from '../Components/BlogDetails'
+import NotFound from '../Handlers/NotFound'
+
 
 function App() {
+  // ici nous gérons les routes de l'application
   return (
     <Router>
-      <div className="App">
+      <div className="App container">
         <Navbar />
         <div className="content">
           <Switch>
@@ -17,6 +20,9 @@ function App() {
             </Route>
             <Route path="/create">
               <Create />
+            </Route>
+            <Route path="/jup">
+              <Game />
             </Route>
             <Route path="/blogs/:id">
               <BlogDetails />
@@ -31,4 +37,4 @@ function App() {
   );
 }
 
-export default App;
+export default App

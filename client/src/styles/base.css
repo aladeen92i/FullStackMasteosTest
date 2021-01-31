@@ -1,0 +1,8 @@
+:root {
+    --danger: #ff8a80;
+    --blue: #6292db;
+  }
+  
+  body {
+    background-color: rgba(0, 0, 0, 0.603);
+  }

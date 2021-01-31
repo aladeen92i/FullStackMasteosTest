@@ -1,0 +1,19 @@
+.button {
+    background-color: rgb(68, 59, 116);
+    border: 2px solid var(--bue);
+    border-radius: 0.5rem;
+    color: var(--light);
+    font-size: 1rem;
+    margin: 1rem;
+    padding: 0.2rem 1rem;
+    transition: all 0.4s ease-out;
+  }
+  
+  .button:hover {
+    background-color: rgb(131, 127, 127);
+  }
+  
+  .buttons_center {
+    display: flex;
+    justify-content: center;
+  }

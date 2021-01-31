@@ -30,32 +30,29 @@ function SumArray () {
   // conditional rendering
 
   return (
-    <div>
+    <div className="container">
     <div className="sumArray">
       <h2>Array Nesting ! </h2>
       <br></br>
-        <p>
-            i will be an array, containing integers, strings and/or arrays like itself.
-            Sum all the integers you find, anywhere in the nest of arrays.
-            <br></br>
-            Write it like this : 1,2,3,4 for simple sum or 1,2,[1,2,3] for nested arrays otherwise it will not work
-        </p>
+      <h2> i will be an array, containing integers, strings and/or arrays like itself.
+          Sum all the integers you find, anywhere in the nest of arrays.
+          <br></br>
+          Write it like this : 1,2,3,4 for simple sum or 1,2,[1,2,3] for nested arrays otherwise it will not work
+      </h2>
         
-        
-      <form onSubmit={handleSubmit}>
-        <label>your numbers and/or arrays</label>
+      <form onSubmit={handleSubmit} className="form">
+        <label className="form-label">your numbers and/or arrays</label>
         <input 
+          className="form-input"
           type="text" 
           required 
           value={String1}
           onChange={(e) => setString1(e.target.value)}
         />
-        <button>Here we Go !</button>
+        <button className="button button_center"> Here we Go !</button>
       </form>
     </div>
-      <ul>
-        <li>{result && <div>{result}</div>}</li>
-      </ul>
+        {result && <div>{result}</div>}
     </div>
 
   );
