@@ -1,14 +1,20 @@
 env:
   browser: true
   es2021: true
-extends:
-  - 'plugin:react/recommended'
-  - google
+extends: 'eslint:recommended'
 parserOptions:
-  ecmaFeatures:
-    jsx: true
   ecmaVersion: 12
   sourceType: module
-plugins:
-  - react
-rules: {}
+rules:
+  indent:
+    - error
+    - tab
+  linebreak-style:
+    - error
+    - unix
+  quotes:
+    - error
+    - single
+  semi:
+    - error
+    - never
