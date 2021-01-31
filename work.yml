@@ -1,13 +1,13 @@
-name: Backend Node.js CI
+name: Backend Nodejs CI
 
 on:
   push:
     paths:
-    - "client/**"
+    - "server/**"
 
 defaults:
   run:
-    working-directory: client
+    working-directory: server
 
 jobs:
   lint:
