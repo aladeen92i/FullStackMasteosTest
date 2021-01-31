@@ -31,7 +31,7 @@ jobs:
       run: npm run lint --if-present
 
   build:
-    name: Test
+    name: Build
     needs: lint # only try to build if lint passes
     runs-on: ubuntu-latest
     strategy:
