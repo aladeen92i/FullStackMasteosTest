@@ -8,7 +8,7 @@ import cors from 'cors'
 
 const app = express()
 
-// Middlewares
+// Middlewarezz
 app.use(cors())
 app.use(express.json())
 
