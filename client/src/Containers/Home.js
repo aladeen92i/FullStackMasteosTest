@@ -1,16 +1,18 @@
-import CoinTicker from "../Components/CoinTicker"
+import React from 'react'
+
+//import CoinTicker from '../Components/CoinTicker'
 
 const Home = () => {
-  //const { error, isPending, data: blogs } = useFetch('http://localhost:8000/blogs')
+	//const { error, isPending, data: blogs } = useFetch('http://localhost:8000/blogs')
 
-  return (
-    <div className="home">
-      {/* { error && <div>{ error }</div> } */}
-      {/* { isPending && <div>Loading...</div> } */}
-      {/* {<CoinTicker ></CoinTicker>} */}
+	return (
+		<div className="home">
+			{/* { error && <div>{ error }</div> } */}
+			{/* { isPending && <div>Loading...</div> } */}
+			{/* {<CoinTicker ></CoinTicker>} */}
 
-    </div>
-  );
+		</div>
+	)
 }
  
-export default Home;
+export default Home
