@@ -3,7 +3,7 @@
 
 import express from 'express'
 import cors from 'cors'
-import * as utils from './utils/utils.js'// ton fichier avec tes fonctions pures je sais pas comment il s'appelle
+import * as utils from './utils/utils.js'
 //import fetch from 'node-fetch'
 
 const app = express()
@@ -15,47 +15,23 @@ app.use(express.json())
 app.post('/doubleIt', (req,res) => {
 	let {toDouble} = req.body
 	toDouble = parseInt(toDouble, 10)
-	if(typeof toDouble === 'number'){
-		const result = toDouble * 2
-		res.status(200).json(result)
-	}else{
-		throw new Error('veuillez entrer un nombre')
-	}
+	res.status(200).json(utils.doubleIt(toDouble))
 })
 
 app.post('/isNumberEven',(req, res) => {
 	let {isEven} = req.body
-	isEven = parseInt(isEven)
-	if (isEven % 2 === 0) {
-		res.status(200).json('it\'s even !')
-	}
-	else {
-		res.status(200).json('it\'s odd !')
-	}
+	isEven = parseInt(isEven, 10)
+	res.status(200).json(utils.isEven(isEven))
 })
 
 app.post('/whatExtension', (req, res) => {
 	let {fileName} = req.body 
-	//is there a point in the string
-	if (fileName.indexOf('.') < 0) {
-		res.status(400).json('didnt find file extension')
-	}
-	// Otherwise, we need to grab and return the extension
-	let filenameParts = fileName.split('.')
-	res.status(200).json(filenameParts[filenameParts.length-1])
+	res.status(200).json(utils.whatExtension(fileName))
 })
 
 app.post('/longestString', (req, res) => {
-	let payload = req.body
-	let longestLength = 0
-	let returnString = ''
-	payload.forEach(function(item){
-		if ((typeof item === 'string') && (item.length > longestLength)) {
-			longestLength = item.length
-			returnString = item
-		}
-	})
-	res.status(200).json(returnString)
+	let stringArray = req.body
+	res.status(200).json(utils.longestString(stringArray))
 })
 
 app.post('/arraySum', (req,res) => {
