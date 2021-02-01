@@ -48,7 +48,7 @@ function IsEven () {
 					<button className="button button_center">Here we Go !</button>
 				</form>
 			</div>
-			{result && <div>{result}</div>}
+			{result ? <div>Its Even</div> : <div>Its Odd</div>}
 		</div>
 
 	)

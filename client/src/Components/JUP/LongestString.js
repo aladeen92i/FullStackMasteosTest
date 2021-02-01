@@ -11,12 +11,12 @@ function LongestString () {
 
 	const handleSubmit = (e) => {
 		e.preventDefault()
-		const payload = [String1, String2, String3]
+		const stringArray = [String1, String2, String3]
 
 		fetch('http://localhost:8080/longestString', {
 			method: 'POST',
 			headers: { 'Content-Type': 'application/json' },
-			body: JSON.stringify(payload)
+			body: JSON.stringify(stringArray)
 		})
 			.then((res) => res.json())
 			.then((res) => {
