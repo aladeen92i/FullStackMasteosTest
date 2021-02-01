@@ -35,10 +35,8 @@ function SumArray () {
 			<div className="sumArray">
 				<h2>Array Nesting ! </h2>
 				<br></br>
-				<h2> <p>i will be an array, containing integers, strings and/or arrays like itself.
-    					Sum all the integers you find, anywhere in the nest of arrays.</p>
-				</h2>
-				<blink>Write it like this : 1,2,3,4 for simple sum or 1,2,[1,2,3] for nested arrays otherwise it will not work</blink>
+				<h2><p>i will be an array, containing integers, strings and/or arrays like itself.Sum all the integers you find, anywhere in the nest of arrays.</p></h2>
+				<p>Write it like this : 1,2,3,4 for simple sum or 1,2,[1,2,3] for nested arrays otherwise it will not work</p>
 				<form onSubmit={handleSubmit} className="form">
 					<label className="form-label">your numbers and/or arrays</label>
 					<input 
