@@ -30,8 +30,6 @@ function WhatExtension () {
 		}
 	}
 
-	// conditional rendering
-
 	return (
 		<div className="container">
 			<div className="whatExtension">
@@ -50,9 +48,7 @@ function WhatExtension () {
 			</div>
 			{result && <div>{result}</div>}
 		</div>
-
 	)
 }
-
  
 export default WhatExtension

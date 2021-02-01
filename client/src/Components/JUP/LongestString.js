@@ -32,8 +32,6 @@ function LongestString () {
 		}
 	}
 
-	// conditional rendering
-
 	return (
 		<div className="container">
 			<div className="longestString">
@@ -65,15 +63,12 @@ function LongestString () {
 						value={String3}
 						onChange={(e) => setString3(e.target.value)}
 					/>
-       
 					<button className="button button_center">Here we Go !</button>
 				</form>
 			</div>
 			{result && <div>{result}</div>}
 		</div>
-
 	)
 }
-
  
 export default LongestString

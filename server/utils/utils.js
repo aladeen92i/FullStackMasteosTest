@@ -9,10 +9,10 @@ export function doubleIt(integer) {
 
 export function isEven(integer) {
 	if (integer % 2 === 0) {
-        return true// 'its even !'
+        return true
 	}
 	else {
-		return false // 'its odd !'
+		return false
 	}
 }
 
@@ -63,3 +63,28 @@ export function sumNestedArrays(array) {
     }
     return total
 }
+
+export async function getCoinTicker() {
+
+    const requestOptions = {
+        method: 'GET',
+        headers: {
+            "Content-Type": "application/json",
+            "Accept-Encoding": "deflate, gzip",
+            "X-CMC_PRO_API_KEY": "2de81a53-a7ad-4538-b69b-2aae41b63efc"
+                },
+        mode: 'cors',
+        qs: {
+            'start': '1',
+            'limit': '50',
+            'convert': 'USD'
+        },
+        json: true,
+        gzip: true
+        }
+        const result = await fetch('https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest', requestOptions)
+        const json = await result.json()
+        let {data} = json 
+        console.log(data)
+}                                 
+

@@ -33,7 +33,6 @@ function testSumNestedArray() {
     ].forEach(testCase => assert.deepEqual(sumNestedArrays(testCase.input), testCase.expected))
 }
 
-
 testDoubleIt()
 testIsEven()
 testWhatExtension()

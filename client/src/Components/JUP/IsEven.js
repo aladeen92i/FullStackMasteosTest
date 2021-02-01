@@ -30,8 +30,6 @@ function IsEven () {
 		}
 	}
 
-	// conditional rendering
-
 	return (
 		<div className="container">
 			<div className="isEven">
@@ -50,9 +48,7 @@ function IsEven () {
 			</div>
 			{result ? <div>Its Even</div> : <div>Its Odd</div>}
 		</div>
-
 	)
 }
-
  
 export default IsEven

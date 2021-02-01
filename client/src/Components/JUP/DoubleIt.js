@@ -29,8 +29,6 @@ function DoubleIt () {
 		}
 	}
 
-	// conditional rendering
-
 	return (
 		<div className="container">
 			<div className="doubleIt">
@@ -49,9 +47,7 @@ function DoubleIt () {
 			</div>
 			{result && <div>{result}</div>}
 		</div>
-
 	)
 }
-
  
 export default DoubleIt
