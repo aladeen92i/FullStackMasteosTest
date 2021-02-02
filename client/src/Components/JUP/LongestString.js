@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import {MDBBtn, MDBInput, MDBAlert, MDBCol, MDBRow} from 'mdbreact'
+
 
 function LongestString () {
 
@@ -33,41 +35,54 @@ function LongestString () {
 	}
 
 	return (
-		<div className="container">
-			<div className="longestString">
-				<h2>which is the longest string ?</h2>
-				<br></br>
-				<form onSubmit={handleSubmit} className="form">
-					<label className="form-label">your strings</label>
-					<br></br>
-					<input
-						className="form-input"
-						type="text" 
-						required 
-						value={String1}
-						onChange={(e) => setString1(e.target.value)}
-					/>
-        
-					<input 
-						className="form-input"
-						type="text" 
-						required 
-						value={String2}
-						onChange={(e) => setString2(e.target.value)}
-					/>
-      
-					<input 
-						className="form-input"
-						type="text" 
-						required 
-						value={String3}
-						onChange={(e) => setString3(e.target.value)}
-					/>
-					<button className="button button_center">Here we Go !</button>
-				</form>
-			</div>
-			{result && <div>{result}</div>}
-		</div>
+
+	<form onSubmit={handleSubmit} className="form">
+		<MDBRow>
+			<MDBCol md="10">
+				<MDBInput 
+					label="type here"
+					type="text" 
+					required 
+					value={String1}
+					onChange={(e) => setString1(e.target.value)}
+				/>
+			</MDBCol>
+		</MDBRow>
+		<MDBRow>
+			<MDBCol md="10">
+				<MDBInput 
+					label="type here"
+					type="text" 
+					required 
+					value={String2}
+					onChange={(e) => setString2(e.target.value)}
+				/>
+			</MDBCol>
+		</MDBRow>
+		<MDBRow>
+			<MDBCol md="10">
+				<MDBInput 
+					label="type here"
+					type="text" 
+					required 
+					value={String3}
+					onChange={(e) => setString3(e.target.value)}
+				/>
+			</MDBCol>
+		</MDBRow>
+		<MDBRow className="align-self-center">
+			<MDBCol md="4">
+				<MDBBtn type="submit" color="primary" size="lg" className="waves-light btn btn-outline-secondary">Go</MDBBtn>
+			</MDBCol>
+			<MDBCol md="8">
+				{result != 0 ?
+				<MDBAlert color="primary" >
+						Result : {result}
+				</MDBAlert>
+				:""}
+			</MDBCol>
+		</MDBRow>
+	</form>
 	)
 }
  

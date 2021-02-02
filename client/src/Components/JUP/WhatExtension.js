@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import {MDBBtn, MDBInput, MDBAlert, MDBCol, MDBRow} from 'mdbreact'
 
 function WhatExtension () {
 
@@ -31,23 +32,31 @@ function WhatExtension () {
 	}
 
 	return (
-		<div className="container">
-			<div className="whatExtension">
-				<h2>What kind of extension is this ? (submit filename along with his .extension)</h2>
-				<form onSubmit={handleSubmit} className="form">
-					<label className="form-label">your filename</label>
-					<input
-						className="form-input"
-						type="text" 
-						required 
-						value={fileName}
-						onChange={(e) => setFileName(e.target.value)}
-					/>
-					<button className="button button_center">Here we Go !</button>
-				</form>
-			</div>
-			{result && <div>{result}</div>}
-		</div>
+			<form onSubmit={handleSubmit} className="form">
+				<MDBRow>
+					<MDBCol md="10">
+						<MDBInput 
+							label="type here"
+							type="text" 
+							required 
+							value={fileName}
+							onChange={(e) => setFileName(e.target.value)}
+						/>
+					</MDBCol>
+				</MDBRow>
+				<MDBRow className="align-self-center">
+					<MDBCol md="4">
+						<MDBBtn type="submit" color="primary" size="lg" className="waves-light btn btn-outline-secondary">Go</MDBBtn>
+					</MDBCol>
+					<MDBCol md="8">
+						{result != 0 ?
+						<MDBAlert color="primary" >
+								Result : {result}
+						</MDBAlert>
+						:""}
+					</MDBCol>
+				</MDBRow>
+			</form>
 	)
 }
  
