@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import {MDBBtn, MDBIcon, MDBInput, MDBAlert, MDBCol, MDBRow, MDBView, MDBMask} from 'mdbreact'
+import {MDBBtn, MDBInput, MDBAlert, MDBCol, MDBRow} from 'mdbreact'
 
 function DoubleIt () {
 
@@ -45,7 +45,7 @@ function DoubleIt () {
 						/>
 					</MDBCol>
 					<MDBCol md="2">
-						<MDBBtn type="submit" color="primary" size="lg" className="waves-light btn btn-outline-secondary">Go</MDBBtn>
+						<MDBBtn type="submit" color="primary" size="lg" className="waves-light btn " color="elegant">Go</MDBBtn>
 					</MDBCol>
 					<MDBRow>
 						<MDBCol >

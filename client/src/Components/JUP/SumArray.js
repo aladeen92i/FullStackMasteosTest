@@ -48,7 +48,7 @@ function SumArray () {
 		</MDBRow>
 		<MDBRow className="align-self-center">
 			<MDBCol md="4">
-				<MDBBtn type="submit" color="primary" size="lg" className="waves-light btn btn-outline-secondary">Go</MDBBtn>
+				<MDBBtn type="submit" color="primary" size="lg" className="waves-light" color="elegant">Go</MDBBtn>
 			</MDBCol>
 			<MDBCol md="8">
 				{result != 0 ?

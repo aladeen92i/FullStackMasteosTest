@@ -1,14 +1,9 @@
-// import { createRequire } from 'module'
-// const require = createRequire(import.meta.url)
-
 import express from 'express'
 import cors from 'cors'
 import * as utils from './utils/utils.js'
-//import fetch from 'node-fetch'
 
 const app = express()
 
-// Middlewarezz
 app.use(cors())
 app.use(express.json())
 
@@ -40,11 +35,6 @@ app.post('/arraySum', (req,res) => {
 	let array = JSON.parse(payload)
 	res.status(200).json(utils.sumNestedArrays(array))
 })
-
-// app.get('/coinTicker', async (req, res) => {
-        
-//         res.status(200).json(data)
-// })
 
 app.listen(8080, () => {
 	console.log('Server listening on 8080')

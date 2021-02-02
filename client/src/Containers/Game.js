@@ -9,15 +9,14 @@ import {MDBCard, MDBCardBody, MDBRow, MDBCol, MDBView, MDBMask, MDBIcon} from "m
 const Game = () => {
 	return (
 		<MDBCard className="my-5 px-5 pb-5">
-		<MDBCardBody>
-		  <h2 className="h1-responsive font-weight-bold text-center my-5">
-			Recent posts
-		  </h2>
+			<MDBCardBody>
+		  		<h2 className="h1-responsive font-weight-bold text-center my-5 ">
+		  			<a href="http://zpalexander.com/you-cant-javascript-under-pressure/" target="_blank">
+						  Javascript under pressure recoded
+					</a>
+		  		</h2>
 		  <p className="text-center w-responsive mx-auto mb-5">
-			Duis aute irure dolor in reprehenderit in voluptate velit esse
-			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-			cupidatat non proident, sunt in culpa qui officia deserunt mollit
-			anim id est laborum.
+			You can visit the website but dont click on start the game, it isn't hosted anymore AFAIK.
 		  </p>
 		  <hr className="my-5"/>
 		  <MDBRow>
@@ -71,8 +70,8 @@ const Game = () => {
 			  </h3>
 			  <IsEven />
 			</MDBCol>
-
 		  </MDBRow>
+
 		  <hr className="my-7" />
 		  <MDBRow>
 		  	<MDBCol lg="3">
@@ -87,6 +86,7 @@ const Game = () => {
 				</a>
 			  </MDBView>
 			</MDBCol>
+
 			<MDBCol lg="3">
 			  <strong className="">
 				<h6 className="font-weight-bold mb-3 pr-3">
@@ -156,9 +156,6 @@ const Game = () => {
 			  <SumArray />
 			</MDBCol>
 		  </MDBRow>
-
-		  
-
 
 		</MDBCardBody>
 	  </MDBCard>

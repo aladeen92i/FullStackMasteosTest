@@ -20,7 +20,7 @@ class Navbar extends React.Component {
 	render() {
 		return (
 			<header>
-				<MDBNavbar color="black" fixed="" dark expand="md">
+				<MDBNavbar color="elegant-color" fixed="" dark expand="md">
 					<MDBContainer>
 						<MDBNavbarBrand href="/">
 						<strong>The Aladeen Experiment</strong>
@@ -28,13 +28,11 @@ class Navbar extends React.Component {
 						<MDBNavbarToggler onClick={this.onClick} />
 						<MDBCollapse isOpen={this.state.collapse} navbar>
 						<MDBNavbarNav left>
-							<MDBNavItem active>
+							<MDBNavItem >
 							<MDBNavLink to="/">Home</MDBNavLink>
 							</MDBNavItem>
 							<MDBNavItem>
 							<MDBNavLink to="/jup">JUP</MDBNavLink>
-							</MDBNavItem>
-							<MDBNavItem>
 							</MDBNavItem>
 						</MDBNavbarNav>
 						</MDBCollapse>

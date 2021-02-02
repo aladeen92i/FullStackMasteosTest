@@ -6,7 +6,6 @@ import Game from './Game'
 import NotFound from '../Handlers/NotFound'
 
 function App() {
-	// ici nous gérons les routes de l'application
 	return (
 		<Router>					
 			<Navbar />
