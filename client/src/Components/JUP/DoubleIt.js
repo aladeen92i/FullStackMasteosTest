@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import {MDBBtn, MDBIcon, MDBInput, MDBAlert, MDBCol, MDBRow, MDBView, MDBMask} from 'mdbreact'
 
 function DoubleIt () {
 
@@ -30,23 +31,35 @@ function DoubleIt () {
 	}
 
 	return (
-		<div className="container">
-			<div className="doubleIt">
-				<h2>Double Your number !</h2>
-				<form onSubmit={handleSubmit} className="form">
-					<label className="form-label">type your number here</label>
-					<input 
-						className="form-input"
-						type="number" 
-						required 
-						value={toDouble}
-						onChange={(e) => setToDouble(e.target.value)}
-					/>
-					<button className="button button_center">Here we Go !</button>
-				</form>
-			</div>
-			{result && <div>{result}</div>}
-		</div>
+	<MDBRow>
+		<MDBCol lg="5">
+			<form onSubmit={handleSubmit} className="form">
+				<MDBRow>
+					<MDBCol md="8">
+						<MDBInput 
+							label="type here"
+							type="number" 
+							required 
+							value={toDouble}
+							onChange={(e) => setToDouble(e.target.value)}
+						/>
+					</MDBCol>
+					<MDBCol md="2">
+						<MDBBtn type="submit" color="primary" size="lg" className="waves-light btn btn-outline-secondary">Go</MDBBtn>
+					</MDBCol>
+					<MDBRow>
+						<MDBCol >
+							{result != 0 ?
+							<MDBAlert color="primary" >
+									Result : {result}
+							</MDBAlert>
+							:""}
+						</MDBCol>
+					</MDBRow>
+				</MDBRow>
+			</form>
+		</MDBCol>
+	</MDBRow>
 	)
 }
  

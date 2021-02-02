@@ -8,10 +8,8 @@ import NotFound from '../Handlers/NotFound'
 function App() {
 	// ici nous gérons les routes de l'application
 	return (
-		<Router>
-			<div className="App container">
-				<Navbar />
-				<div className="content">
+		<Router>					
+			<Navbar />
 					<Switch>
 						<Route exact path="/">
 							<Home />
@@ -23,8 +21,6 @@ function App() {
 							<NotFound />
 						</Route>
 					</Switch>
-				</div>
-			</div>
 		</Router>
 	)
 }

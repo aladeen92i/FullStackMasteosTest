@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import {MDBBtn, MDBIcon, MDBInput, MDBAlert, MDBCol, MDBRow, MDBView, MDBMask} from 'mdbreact'
 
 function IsEven () {
 
@@ -31,24 +32,37 @@ function IsEven () {
 	}
 
 	return (
-		<div className="container">
-			<div className="isEven">
-				<h2>Is your Number Even ?</h2>
-				<form onSubmit={handleSubmit} className="form">
-					<label className="form-label">your number</label>
-					<input
-						className="form-input"
-						type="number" 
-						required 
-						value={isEven}
-						onChange={(e) => setIsEven(e.target.value)}
-					/>
-					<button className="button button_center">Here we Go !</button>
-				</form>
-			</div>
-			{result ? <div>Its Even</div> : <div>Its Odd</div>}
-		</div>
+	<MDBRow>
+		<MDBCol lg="5">
+			<form onSubmit={handleSubmit} className="form">
+				<MDBRow>
+					<MDBCol md="8">
+						<MDBInput 
+							label="type your number here"
+							type="number" 
+							required 
+							value={isEven}
+							onChange={(e) => setIsEven(e.target.value)}
+						/>
+					</MDBCol>
+					<MDBCol md="2">
+						<MDBBtn type="submit" color="primary" size="lg" className="waves-light btn btn-outline-secondary">Go</MDBBtn>
+					</MDBCol>
+					<MDBRow>
+						<MDBCol >
+							{result != 0 ?
+							<MDBAlert color="primary" >
+									Result : {result ? "Its Even" : "Its Odd"}
+							</MDBAlert>
+							:""}
+						</MDBCol>
+					</MDBRow>
+				</MDBRow>
+			</form>
+		</MDBCol>
+	</MDBRow>
 	)
 }
  
 export default IsEven
+
