@@ -1,4 +1,5 @@
-![Front ReactJS CI](https://github.com/zeley93/FullStackMasteosTest/workflows/Front%20ReactJS%20CI/badge.svg?branch=main&event=workflow_run)
+![Front ReactJS CI](https://github.com/zeley93/FullStackMasteosTest/workflows/Front%20ReactJS%20CI/badge.svg?branch=main)
+![Backend Node.js CI](https://github.com/zeley93/FullStackMasteosTest/workflows/Backend%20Node.js%20CI/badge.svg)
 
 # FullStackMasteosTest
 fullstack poc for a job test
