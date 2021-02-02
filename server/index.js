@@ -3,7 +3,6 @@ import cors from 'cors'
 import * as utils from './utils/utils.js'
 
 const app = express()
-
 app.use(cors())
 app.use(express.json())
 
