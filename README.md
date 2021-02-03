@@ -3,7 +3,9 @@
 
 # Fullstack POC for a job interview
 
-## Made with React.js & Node.js
+The point was to code the functions, that i've been doing in vanilla javascript on http://zpalexander.com/you-cant-javascript-under-pressure/, in a client & a REST API.
+
+## Made with **React.js** & **Node.js**
 
 
 - just clone this repo
