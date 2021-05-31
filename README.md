@@ -14,4 +14,4 @@ The point was to code the functions, that i've been doing in vanilla javascript 
 
 You're ready to go !
 
-## Live Demo : http://51.158.65.111:5000/
+## Live Demo : 
